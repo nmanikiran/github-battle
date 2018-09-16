@@ -6,10 +6,17 @@
   "scripts": {
     "create": "webpack",
     "start": "webpack --mode development --port 8080",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist"
   },
-  "keywords": [],
-  "author": "",
+  "homepage": "http://nmanikiran.github.com/github-battle",
+  "keywords": [
+    "react",
+    "es6",
+    "webpack",
+    "github"
+  ],
+  "author": "nmanikiran",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
@@ -34,6 +41,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "gh-pages": "^2.0.0",
     "style-loader": "^0.23.0",
     "sw-precache-webpack-plugin": "^0.11.5",
     "webpack": "^4.18.0",

@@ -68,7 +68,7 @@ export default class PlayerInput extends Component {
     return (
       <div className="column w100">
         <Autocomplete
-          inputProps={{ placeholder: 'github username' }}
+          inputProps={{ placeholder: 'add github username' }}
           getItemValue={this.getItemValue}
           items={this.state.autocompleteData}
           renderItem={this.renderItem}
