@@ -1,5 +1,7 @@
-var path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -16,6 +18,9 @@ module.exports = {
   plugins: [
     new htmlWebpackPlugin({
       template: './src/index.html',
+    }),
+    new BaseHrefWebpackPlugin({
+      baseHref: process.env.NODE_ENV == 'development' ? '/' : '/github-battle/',
     }),
   ],
 };
