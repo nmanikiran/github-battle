@@ -8,12 +8,12 @@ import Loadable from 'react-loadable';
 const Loading = () => <div>Loading...</div>;
 
 const Battle = Loadable({
-  loader: () => import('./Battle'),
+  loader: () => import(/* webpackChunkName: "battle" */ './Battle'),
   loading: Loading,
 });
 
 const Popular = Loadable({
-  loader: () => import('./Popular'),
+  loader: () => import(/* webpackChunkName: "popular" */ './Popular'),
   loading: Loading,
 });
 

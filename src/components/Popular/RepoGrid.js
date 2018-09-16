@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class RepoGrid extends Component {
   render() {
@@ -33,3 +34,6 @@ export default class RepoGrid extends Component {
     );
   }
 }
+RepoGrid.propTypes = {
+  repos: PropTypes.array.isRequired,
+};

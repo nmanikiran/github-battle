@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
+import PropTypes from 'prop-types';
 export default class Player extends Component {
   constructor(props) {
     super(props);
@@ -15,3 +16,8 @@ export default class Player extends Component {
     );
   }
 }
+Player.propTypes = {
+  label: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired,
+  profile: PropTypes.object.isRequired,
+};

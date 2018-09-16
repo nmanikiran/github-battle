@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlayerPreview from './PlayerPreview';
-
+import PropTypes from 'prop-types';
 export default class Profile extends Component {
   constructor(props) {
     super(props);
@@ -25,3 +25,6 @@ export default class Profile extends Component {
     );
   }
 }
+Profile.propTypes = {
+  info: PropTypes.object.isRequired,
+};

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 export default class PlayerPreview extends Component {
   constructor(props) {
     super(props);
@@ -18,3 +18,7 @@ export default class PlayerPreview extends Component {
     );
   }
 }
+PlayerPreview.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+};

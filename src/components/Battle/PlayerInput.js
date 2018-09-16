@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getUsers } from './../../utils/api';
 import Autocomplete from 'react-autocomplete';
+import PropTypes from 'prop-types';
 
 const styles = {
   avatar: {
@@ -80,3 +81,6 @@ export default class PlayerInput extends Component {
     );
   }
 }
+PlayerInput.propTypes = {
+  onSelect: PropTypes.func.isRequired,
+};

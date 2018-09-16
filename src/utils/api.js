@@ -1,7 +1,6 @@
 import axios from 'axios';
-const { GITHUB_CLIENT_ID, GITHUB_SECRET_ID } = require('../../env.json');
+const { GITHUB_CLIENT_ID, GITHUB_SECRET_ID } = process.env;
 const params = `?client_id=${GITHUB_CLIENT_ID}&client_secret=${GITHUB_SECRET_ID}`;
-
 const getProfile = username => {
   return axios
     .get(`https://api.github.com/users/${username}${params}`)
