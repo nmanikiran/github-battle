@@ -14,10 +14,10 @@ module.exports = {
       { test: /\.(css)$/, use: ['style-loader', 'css-loader'] },
     ],
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   plugins: [
     new htmlWebpackPlugin({
-      template: './src/index.html',
+      template: __dirname + '/src/index.html',
     }),
     new BaseHrefWebpackPlugin({
       baseHref: process.env.NODE_ENV == 'development' ? '/' : '/github-battle/',

@@ -20,7 +20,11 @@ const Popular = Loadable({
 export default class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter
+        basename={
+          process.env.NODE_ENV == 'development' ? '/' : '/github-battle'
+        }
+      >
         <div className="container">
           <Nav />
 
